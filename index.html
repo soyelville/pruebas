@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copiar Texto</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const text = "Datos Bancarios Gabriela Nuñez";
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Texto copiado al portapapeles');
-            });
-        });
-    </script>
 </head>
 <body>
-    <p>El texto se ha copiado automáticamente al portapapeles.</p>
+    <p>Haz clic en el botón para copiar el texto al portapapeles:</p>
+    <button id="copiar">Copiar texto</button>
+
+    <script>
+        document.getElementById('copiar').addEventListener('click', () => {
+            const texto = "Texto a copiar al portapapeles";
+            navigator.clipboard.writeText(texto)
+                .then(() => alert('Texto copiado al portapapeles'))
+                .catch(err => alert('Hubo un error: ' + err));
+        });
+    </script>
 </body>
 </html>
