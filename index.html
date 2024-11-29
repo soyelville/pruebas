@@ -6,13 +6,9 @@
     <title>Copiar Texto</title>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const text = "Gabriela Núñez
-                            13.476.446-5
-                            gabrielanunespalma@gmail.com
-                            Banco Santander
-                            3664503";
+            const text = "Texto a copiar";
             navigator.clipboard.writeText(text).then(() => {
-                alert('Datos Cuenta Correiente copiados al portapapeles');
+                alert('Texto copiado al portapapeles');
             });
         });
     </script>
